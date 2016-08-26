@@ -5,6 +5,7 @@ class CreateProjects < ActiveRecord::Migration[5.0]
       t.text :description
       t.string :source_link
       t.string :complete_link
+      t.attachment :image
       t.boolean :active
 
       t.timestamps
