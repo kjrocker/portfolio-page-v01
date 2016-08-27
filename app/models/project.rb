@@ -6,4 +6,9 @@ class Project < ApplicationRecord
   validates_attachment :image,
     content_type: { content_type: "image/jpeg" },
     size: { in: 0..2.megabytes }
+
+  def stripped_name
+    name.gsub(/[ -]/, '_').downcase
+  end
+  
 end
