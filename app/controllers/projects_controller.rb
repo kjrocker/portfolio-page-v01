@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :authenticate_admin!, except: [:show, :index, :new, :create]
+  before_action :authenticate_admin!, except: [:show, :index]
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -7,11 +7,10 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    if admin_signed_in?
-      @project = Project.new
-    else
-      redirect_to root_url
-    end
+    @project = Project.new
+  end
+
+  def edit
   end
 
   def create
