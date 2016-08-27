@@ -7,7 +7,11 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @project = Project.new
+    if admin_signed_in?
+      @project = Project.new
+    else
+      redirect_to root_url
+    end
   end
 
   def create

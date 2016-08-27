@@ -34,4 +34,6 @@
 
 <br>
 
-<%= link_to 'New Project', new_project_path %>
+<% if admin_signed_in? %>
+  <%= link_to 'New Project', new_project_path %>
+<% end %>
