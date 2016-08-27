@@ -1,17 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  description: MyText
-  source_link: MyString
-  complete_link: MyString
-  image: 
-  active: false
-
-two:
-  name: MyString
-  description: MyText
-  source_link: MyString
-  complete_link: MyString
-  image: 
-  active: false
+portfolio:
+  name: Portfolio
+  description: My portfolio
+  source_link: www.google.com
+  complete_link: www.google.com
+  active: true
+  admin: kevin
+  
+<% 25.times do |n| %>
+project<%= '#{n}' %>:
+  name: <%= "project#{n}" %>
+  description: <%= "description of project#{n}" %>
+  source_link: <%= "project#{n}@example.com" %>
+  complete_link: <%= "project#{n}.heroku.com" %>
+  active: true
+  admin: admin1
+<% end %>
