@@ -33,6 +33,8 @@ gem 'devise'
 # Image Upload
 gem "paperclip", "~> 5.0.0"
 
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
