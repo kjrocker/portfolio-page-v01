@@ -10,7 +10,7 @@ kevin:
   encrypted_password: <%= Admin.new.send(:password_digest, 'password') %>
 
 <% 10.times do |n| %>
-admin<%= '#{n}' %>:
-  email: <%= 'kevin#{n}@example.com' %>
+admin_<%= n %>:
+  email: <%= "kevin#{n}@example.com" %>
   encrypted_password: <%= Admin.new.send(:password_digest, 'password') %>
 <% end %>

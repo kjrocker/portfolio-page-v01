@@ -7,9 +7,8 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
-  def sign_in(admin)
-    post admin_session_path, params: { session: { email:     admin.email,
-                                                  password: 'password' } }
-  end
+end
 
+class ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
 end
