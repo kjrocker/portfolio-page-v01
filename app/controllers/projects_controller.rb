@@ -3,7 +3,11 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   def index
-    @projects = Project.all
+    if admin_signed_in?
+      @projects = Project.all
+    else
+      @projects = Project.where(active: true)
+    end
   end
 
   def new
