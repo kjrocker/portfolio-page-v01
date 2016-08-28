@@ -1,5 +1,6 @@
 <footer class="footer">
   <div class="container">
+    <%# TODO: Create junk email address for filtering %>
     <%= mail_to "kevin.j.rocker@gmail.com", "Email Me!" %>
     <% if admin_signed_in? %>
       <%= link_to 'Profile', edit_admin_registration %>
