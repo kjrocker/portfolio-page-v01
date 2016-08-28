@@ -5,7 +5,7 @@ class Project < ApplicationRecord
                     path: ':rails_root/public/system/:class/:attachment/:filename'
 
   validates_attachment :image,
-    content_type: { content_type: "image/jpeg" },
+    content_type: { content_type: /\Aimage\/.*\z/ },
     size: { in: 0..1.megabytes }
 
   def stripped_name
