@@ -20,4 +20,15 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_basic_links
   end
 
+  test "login and logout links present" do
+    sign_in admins(:kevin)
+    get root_path
+    assert_select "a[href=?]", destroy_admin_session_path, count: 1
+    assert_select "a[href=?]", new_admin_session_path, count: 0
+    sign_out Admin
+    get root_path
+    assert_select "a[href=?]", destroy_admin_session_path, count: 0
+    assert_select "a[href=?]", new_admin_session_path, count: 1
+  end
+
 end

@@ -2,12 +2,11 @@
   <div class="container">
     <%# TODO: Create junk email address for filtering %>
     <%= mail_to "kevin.j.rocker@gmail.com", "Email Me!" %>
+
     <% if admin_signed_in? %>
-      <%= link_to 'Profile', edit_admin_registration %>
       <%= link_to 'Logout', destroy_admin_session_path, method: :delete %>
     <% else %>
       <%= link_to 'Login', new_admin_session_path %>
-      <%= link_to 'Signup', new_admin_registration_path %>
     <% end %>
   </div>
 </footer>

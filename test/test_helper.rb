@@ -11,6 +11,7 @@ class ActiveSupport::TestCase
     assert_select "a[href=?]", root_path, count: 2
     assert_select "a[href=?]", resume_path
     assert_select "a[href=?]", projects_path
+    assert_select "a[href=?]", projects_path
   end
 
 end

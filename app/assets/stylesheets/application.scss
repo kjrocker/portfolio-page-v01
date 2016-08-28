@@ -10,7 +10,16 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require_self
+ *= require_tree .
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// Import Material Design font
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
+
+body {
+  font-family: "Slado 27px", serif;
+}
