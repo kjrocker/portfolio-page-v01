@@ -8,7 +8,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get resume" do
-    get static_pages_resume_url
+    get resume_path
     assert_response :success
   end
 

@@ -15,5 +15,5 @@ project_<%= n %>:
   source_link: <%= "project#{n}@example.com" %>
   complete_link: <%= "project#{n}.heroku.com" %>
   active: true
-  admin: admin_1
+  admin: kevin
 <% end %>
