@@ -1,16 +1,16 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, 'Portfolio') %>
 
-<h1>Projects</h1>
+<p id="notice"><%= notice %></p>
 
 <div class="row project-table">
   <% @projects.each do |p| %>
     <div class="col-md-4 col-sm-12">
-      <h2><%= link_to p.name, p.complete_link %></h2>
-        <%= image_tag p.image, class: 'img-thumbnail' %>
+      <h2><%= link_to p.name, p.full_completed %></h2>
+        <%= image_tag p.image.url, class: 'img-thumbnail'%>
       <p>
         <%= truncate p.description, separator: " ", length: 255 %>
       </p>
-      <small> <%= link_to "(Source)", p.source_link %> </small>
+      <small> <%= link_to "(Source)", p.full_source %> </small>
     </div>
   <% end %>
 </div>

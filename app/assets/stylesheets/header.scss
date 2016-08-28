@@ -10,3 +10,10 @@ $navbar-height: 70px;
 .navbar-padding {
   height: $navbar-height;
 }
+
+.navbar-logo {
+  img {
+    height: $navbar-height - 10px;
+    width: $navbar-height - 10px;
+  }
+}
