@@ -7,6 +7,12 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def assert_basic_links
+    assert_select "a[href=?]", root_path, count: 2
+    assert_select "a[href=?]", resume_path
+    assert_select "a[href=?]", projects_path
+  end
+
 end
 
 class ActionDispatch::IntegrationTest
