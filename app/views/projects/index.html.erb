@@ -1,7 +1,5 @@
 <% provide(:title, 'Portfolio') %>
 
-
-
 <!-- Page Header -->
 <div class="row">
     <div class="col-lg-12">
@@ -20,6 +18,7 @@
     <div class="col-md-4 portfolio-item">
       <%= image_tag p.image, class: 'img-responsive' %>
       <h3> <%= link_to p.name, p.full_completed %> </h3>
+      <p class="text-right">(Source)</P>
       <p><%= truncate p.description, separator: " ", length: 255 %></p>
     </div>
   <% end %>
