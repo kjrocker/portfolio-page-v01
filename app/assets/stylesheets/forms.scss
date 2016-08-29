@@ -1,0 +1,16 @@
+@mixin btn-shared {
+  width: 200px;
+  height: 50px;
+  display: inline-block;
+}
+
+.actions {
+  position: relative;
+  a {
+    @include btn-shared;
+    padding: 12px 0;
+  }
+  input {
+    @include btn-shared;
+  }
+}
