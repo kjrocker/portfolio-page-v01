@@ -11,10 +11,10 @@
 
   <body>
     <%= render 'layouts/header' %>
+    <% if content_for? :before_flash %>
+      <%= yield :before_flash %>
+    <% end %>
     <div class="container">
-      <% if content_for? :before_flash %>
-        <%= yield :before_flash %>
-      <% end %>
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>"><%= message %></div>
       <% end %>
