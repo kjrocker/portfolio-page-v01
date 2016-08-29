@@ -1,6 +1,8 @@
 <% provide(:title, 'Portfolio') %>
 
-<p id="notice"><%= notice %></p>
+<% if admin_signed_in? %>
+  <%= link_to 'New Project', new_project_path, class: "btn btn-primary" %>
+<% end %>
 
 <div class="row project-table">
   <% @projects.each do |p| %>
@@ -10,13 +12,10 @@
       <p>
         <%= truncate p.description, separator: " ", length: 255 %>
       </p>
-      <small> <%= link_to "(Source)", p.full_source %> </small>
+      <small> <%= link_to "(More Info)", project_path(p.id) %>
+              <%= link_to "(Source)", p.full_source %> </small>
     </div>
   <% end %>
 </div>
 
 <br>
-
-<% if admin_signed_in? %>
-  <%= link_to 'New Project', new_project_path %>
-<% end %>

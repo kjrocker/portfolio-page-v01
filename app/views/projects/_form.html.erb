@@ -1,3 +1,5 @@
+
+
 <%= form_for(project) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
 
@@ -8,7 +10,7 @@
 
   <div class="field">
     <%= f.label :description %>
-    <%= f.text_area :description, class: 'form-control' %>
+    <%= f.text_area :description, class: 'form-control', rows: "5" %>
   </div>
 
   <div class="field">
@@ -31,7 +33,7 @@
     <%= f.check_box :active, class: 'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= f.submit :button_msg %>
+  <div class="actions text-center">
+    <%= f.submit msg %> <%= link_to 'Back', back_btn, class: 'btn btn-default' %>
   </div>
 <% end %>
