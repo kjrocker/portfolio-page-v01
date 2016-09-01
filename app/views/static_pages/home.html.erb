@@ -1,13 +1,11 @@
 <% provide(:title, 'Home') %>
 
 <% content_for :before_flash do %>
-  <!-- Image Background Page Header -->
-  <!-- Note: The background image is set within the business-casual.css file. -->
   <header class="business-header">
       <div class="container">
           <div class="row">
               <div class="col-lg-12">
-                  <h1 class="tagline">Business Name or Tagline</h1>
+                  <h1 class="tagline">Kevin Rocker's HQ</h1>
               </div>
           </div>
       </div>
@@ -16,43 +14,48 @@
 
 <div class="row">
   <div class="col-sm-8">
-      <h2>What We Do</h2>
-      <p>Introduce the visitor to the business using clear, informative text. Use well-targeted keywords within your sentences to make sure search engines can find the business.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et molestiae similique eligendi reiciendis sunt distinctio odit? Quia, neque, ipsa, adipisci quisquam ullam deserunt accusantium illo iste exercitationem nemo voluptates asperiores.</p>
+      <h2>Who Am I?</h2>
       <p>
-          <a class="btn btn-default btn-lg" href="#">Call to Action &raquo;</a>
+        I am an enthusastic junior web developer in Ruby on Rails and ReactJS. I have been coding in some capacity for as long as I can remember, and have been working this past year on developing a professional skillset for proper collaborative programming.
+      </p>
+      <p>
+        Communication is extremely important to me. Whether it's communicating with a controller in Ruby, swapping AJAX calls to-and-fro, or explaining the latest esoteric code problem (or awesome new feature!) to a non-technical client, I'm always able to get my message across.
+      </p>
+      <p>
+        <%= link_to "View My Portfolio", projects_path, class: "btn btn-default btn-lg" %>
       </p>
   </div>
   <div class="col-sm-4">
-      <h2>Contact Us</h2>
+      <h2>Contact Me</h2>
       <address>
-          <strong>Start Bootstrap</strong>
-          <br>3481 Melrose Place
-          <br>Beverly Hills, CA 90210
+          <strong>Kevin Rocker</strong>
+          <br>Charlotte, NC 28210
           <br>
       </address>
       <address>
-          <abbr title="Phone">P:</abbr>(123) 456-7890
+          <strong>Online Presence</strong>
+          <br> <%= link_to "LinkedIn", "http://www.linkedin.com/in/kevin-rocker" %>
+          <br> <%= link_to "GitHub", "https://github.com/krocker34" %>
+          <br> <%= mail_to "kevin.j.rocker@gmail.com", "Email" %>\
           <br>
-          <abbr title="Email">E:</abbr> <a href="mailto:#">name@example.com</a>
       </address>
   </div>
 </div>
 
 <div class="row">
   <div class="col-sm-4">
-      <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-      <h2>Marketing Box #1</h2>
+      <!-- <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt=""> -->
+      <h2>Innovative</h2>
       <p>These marketing boxes are a great place to put some information. These can contain summaries of what the company does, promotional information, or anything else that is relevant to the company. These will usually be below-the-fold.</p>
   </div>
   <div class="col-sm-4">
-      <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-      <h2>Marketing Box #2</h2>
+      <!-- <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt=""> -->
+      <h2>Passionate</h2>
       <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
   </div>
   <div class="col-sm-4">
-      <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-      <h2>Marketing Box #3</h2>
+      <!-- <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt=""> -->
+      <h2>Skilled</h2>
       <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
   </div>
 </div>
