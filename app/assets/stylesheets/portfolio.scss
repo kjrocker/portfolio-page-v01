@@ -1,5 +1,14 @@
 .portfolio-item {
     margin-bottom: 25px;
+    h3, h4 {
+      display: inline;
+    }
+    h3 {
+      float: left;
+    }
+    h4 {
+      float: right;
+    }
 }
 
 .img-thumbnail {
