@@ -3,7 +3,8 @@ class Project < ApplicationRecord
 
   has_attached_file :image, default_url: "missing.jpg",
                     path: ':rails_root/public/system/:class/:attachment/:filename',
-                    url: '/system/:class/:attachment/:filename'
+                    url: '/system/:class/:attachment/:filename',
+                    styles: {portfolio: "640x480!"}
 
   validates_attachment :image,
     content_type: { content_type: /\Aimage\/.*\z/ },

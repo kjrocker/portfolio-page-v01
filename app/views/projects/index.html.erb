@@ -17,7 +17,7 @@
 <div class="row">
   <% @projects.each do |p| %>
     <div class="col-md-4 portfolio-item">
-      <%= image_tag p.image.url, class: 'img-responsive' %>
+      <%= image_tag p.image.url(:portfolio), class: 'img-responsive' %>
       <h3> <%= link_to p.name, p.full_completed %> <!-- </h3> -->
       <small> <%= link_to "(Source)", p.full_source %> </small> </h3> <br>
       <p> <%= truncate p.description, separator: " ", length: 255 %> </p>
