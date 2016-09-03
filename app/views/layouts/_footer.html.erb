@@ -1,12 +1,12 @@
-<footer class="footer">
-  <div class="container">
-    <%# TODO: Create junk email address for filtering %>
-    <%= mail_to "kevin.j.rocker@gmail.com", "Email Me!" %>
-
-    <% if admin_signed_in? %>
-      <%= link_to 'Logout', destroy_admin_session_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Login', new_admin_session_path %>
-    <% end %>
+<nav class="navbar navbar-inverse navbar-footer">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li> Built in Ruby on Rails 5.0.0 <br>
+      &copy; 2016 - Kevin Rocker</li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Source", "https://github.com/krocker34" %></li>
+      <li><%= mail_to "kevin.j.rocker@gmail.com", "Email" %></li>
+    </ul>
   </div>
-</footer>
+</nav>

@@ -1,14 +1,17 @@
 
-$navbar-height: 70px;
+$navbar-height: 60px;
 
 .navbar {
   font-size: 18px;
   height: $navbar-height;
   padding: 5px 10%;
+  ul.nav a, li {
+    color: #ddd;
+  }
 }
 
-.navbar-padding {
-  height: $navbar-height;
+body {
+  padding-top: $navbar-height;
 }
 
 .navbar-logo {
@@ -22,7 +25,7 @@ $navbar-height: 70px;
 
 .business-header {
     height: 400px;
-    background: url('bubbles.jpg') center center no-repeat scroll;
+    background: url('Post_01.jpg') center center no-repeat scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
