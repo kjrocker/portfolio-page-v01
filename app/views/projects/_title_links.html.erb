@@ -1,0 +1,13 @@
+<h3>
+  <% if project.complete_link.blank? %>
+    project.name
+  <% else %>
+    <%= link_to project.name, project.full_completed %>
+  <% end %>
+
+  <small>
+    <% if !(project.source_link.blank?) %>
+      <%= link_to "(Source)", project.full_source %>
+    <% end %>
+  </small>
+</h3> <br>

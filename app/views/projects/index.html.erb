@@ -21,8 +21,7 @@
     <% slice.each do |p| -%>
       <div class="col-md-4 portfolio-item">
         <%= image_tag p.image.url(:portfolio), class: 'img-responsive' %>
-        <h3> <%= link_to p.name, p.full_completed %> <!-- </h3> -->
-        <small> <%= link_to "(Source)", p.full_source %> </small> </h3> <br>
+        <%= render partial: 'title_links', locals: {project: p} %>
         <p> <%= truncate p.description, separator: " ", length: 255 %> </p>
         <%= render partial: 'project_buttons', locals: {project: p} if admin_signed_in? %>
       </div>
