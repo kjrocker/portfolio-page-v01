@@ -5,6 +5,7 @@
       &copy; 2016 - Kevin Rocker</li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Logout", destroy_admin_session, method: :delete, data: { confirm: 'Are you sure?' } if admin_signed_in? %></li>
       <li><%= link_to "Source", "https://github.com/krocker34/portfolio-page-v01" %></li>
       <li><%= mail_to "kevin.j.rocker@gmail.com", "Email" %></li>
     </ul>
